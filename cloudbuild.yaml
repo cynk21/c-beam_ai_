@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'europe-west1-docker.pkg.dev/myrphin/c-beam-ai/c-beam-ai-image:latest', '.']
+  args: ['build', '--build-arg=USE_CUDA=true', '-t', 'europe-west1-docker.pkg.dev/myrphin/c-beam-ai/c-beam-ai-image:latest', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'europe-west1-docker.pkg.dev/myrphin/c-beam-ai/c-beam-ai-image:latest']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
