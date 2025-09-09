@@ -1,3 +1,4 @@
+THIS_IS_A_DELIBERATE_ERROR
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--build-arg=USE_CUDA=true', '-t', 'europe-west1-docker.pkg.dev/myrphin/c-beam-ai/c-beam-ai-image:latest', '.']
